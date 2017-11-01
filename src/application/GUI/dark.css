@@ -1,0 +1,227 @@
+.background-1{
+	-fx-background-color: rgb(59, 59, 59);
+}
+
+.background-2{
+	-fx-background-color: rgb(38, 38, 38);
+}
+
+.background-3{
+	-fx-background-color: rgb(25, 25, 25);
+}
+
+.button-1{
+	-fx-min-width: 70px;
+	-fx-min-height: 25px;
+	-fx-max-width: 70px;
+	-fx-max-height: 25px;
+	-fx-pref-width: 70px;
+	-fx-pref-height: 25px;
+	
+	-fx-border-radius: 0 0 0 0;
+	-fx-background-radius: 0 0 0 0;
+	-fx-text-fill: white;
+	-fx-background-color: rgb(25, 25, 25);
+}
+
+.input-large {
+	-fx-background-color: rgb(25, 25, 25);
+	-fx-background-radius: 0 0 0 0;
+	-fx-text-fill: white;
+}
+
+.pallet-file-label{
+	-fx-text-fill: white;
+}
+
+.color-picker {
+	-fx-background-color: rgb(25, 25, 25); 
+	-fx-background-radius: 2; 
+	-fx-padding: 0;
+	-fx-background-insets: 0, 1;
+}
+
+.color-picker .color-picker-label .text {
+	visibility: false;
+}
+
+.color-picker .color-picker-label{
+	-fx-scale-x: 2;
+	-fx-scale-y: 2;
+	-fx-spacing: 0;
+	-fx-translate-x: 15px;
+}
+
+.drop-down {
+	-fx-border-radius: 0 0 0 0;
+	-fx-background-radius: 0 0 0 0;
+	-fx-background-color: rgb(25, 25, 25);
+	-fx-text-fill: white;
+}
+
+.icon-button-save-light{
+	-fx-min-width: 25px;
+	-fx-min-height: 25px;
+	-fx-max-width: 25px;
+	-fx-max-height: 25px;
+	-fx-pref-width: 25px;
+	-fx-pref-height: 25px;
+	
+	-fx-background-image: url("Icons/save.png");
+	-fx-background-color: rgb(38, 38, 38);
+	-fx-background-size: cover;
+}
+
+.icon-button-load-light{
+	-fx-min-width: 25px;
+	-fx-min-height: 25px;
+	-fx-max-width: 25px;
+	-fx-max-height: 25px;
+	-fx-pref-width: 25px;
+	-fx-pref-height: 25px;
+	
+	-fx-background-image: url("Icons/open.png");
+	-fx-background-color: rgb(38, 38, 38);
+	-fx-background-size: cover;
+}
+
+.icon-button-start-dark{
+	-fx-min-width: 25px;
+	-fx-min-height: 25px;
+	-fx-max-width: 25px;
+	-fx-max-height: 25px;
+	-fx-pref-width: 25px;
+	-fx-pref-height: 25px;
+	
+	-fx-background-image: url("Icons/play.png");
+	-fx-background-color: rgb(25, 25, 25);
+	-fx-background-size: cover;
+}
+
+.icon-button-stop-dark{
+	-fx-min-width: 25px;
+	-fx-min-height: 25px;
+	-fx-max-width: 25px;
+	-fx-max-height: 25px;
+	-fx-pref-width: 25px;
+	-fx-pref-height: 25px;
+	
+	-fx-background-image: url("Icons/stop.png");
+	-fx-background-color: rgb(25, 25, 25);
+	-fx-background-size: cover;
+}
+.icon-button-add-light{
+	-fx-min-width: 25px;
+	-fx-min-height: 25px;
+	-fx-max-width: 25px;
+	-fx-max-height: 25px;
+	-fx-pref-width: 25px;
+	-fx-pref-height: 25px;
+	
+	-fx-background-image: url("Icons/new.png");
+	-fx-background-color: rgb(38, 38, 38);
+	-fx-background-size: cover;
+}
+
+.icon-button-remove-light{
+	-fx-min-width: 25px;
+	-fx-min-height: 25px;
+	-fx-max-width: 25px;
+	-fx-max-height: 25px;
+	-fx-pref-width: 25px;
+	-fx-pref-height: 25px;
+	
+	-fx-background-image: url("Icons/remove.png");
+	-fx-background-color: rgb(38, 38, 38);
+	-fx-background-size: cover;
+}
+
+.icon-button-duplicate-light{
+	-fx-min-width: 25px;
+	-fx-min-height: 25px;
+	-fx-max-width: 25px;
+	-fx-max-height: 25px;
+	-fx-pref-width: 25px;
+	-fx-pref-height: 25px;
+	
+	-fx-background-image: url("Icons/duplicate.png");
+	-fx-background-color: rgb(38, 38, 38);
+	-fx-background-size: cover;
+}
+
+.icon-button-up-light{
+	-fx-min-width: 25px;
+	-fx-min-height: 25px;
+	-fx-max-width: 25px;
+	-fx-max-height: 25px;
+	-fx-pref-width: 25px;
+	-fx-pref-height: 25px;
+	
+	-fx-background-image: url("Icons/up.png");
+	-fx-background-color: rgb(38, 38, 38);
+	-fx-background-size: cover;
+}
+
+.icon-button-down-light{
+	-fx-min-width: 25px;
+	-fx-min-height: 25px;
+	-fx-max-width: 25px;
+	-fx-max-height: 25px;
+	-fx-pref-width: 25px;
+	-fx-pref-height: 25px;
+	
+	-fx-background-image: url("Icons/down.jpg");
+	-fx-background-color: rgb(38, 38, 38);
+	-fx-background-size: cover;
+}
+
+.button:hover{
+	-fx-border-color: rgb(0, 113, 169);
+	-fx-border-width: 2px;
+}
+
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+
+.pallet-button{
+	-fx-min-width: 30px;
+	-fx-min-height: 30px;
+	-fx-max-width: 30px;
+	-fx-max-height: 30px;
+	-fx-pref-width: 30px;
+	-fx-pref-height: 30px;
+	
+	-fx-border-color: rgb(59, 59, 59);
+}
+
+.canvas-button{
+	-fx-border-color: rgb(120, 59, 59);
+}
+
+.canvas-button:hover{
+	-fx-border-color: rgb(120, 200, 59);
+}
+
+.layer-preview-container{
+	-fx-background-color: rgb(25, 25, 25);
+	-fx-border-color: black;
+	-fx-border-width: 2px;
+	-fx-text-fill: white;
+}
+
+.layer-preview-container_active{
+	-fx-background-color: rgb(50, 50, 50);
+	-fx-border-color: black;
+	-fx-border-width: 2px;
+	-fx-text-fill: white;
+}
+
+.layer-preview-container:hover{
+	-fx-background-color: rgb(75, 75, 75);
+}
+
+.layer-preview-check {
+	-fx-text-fill: white;
+}
+

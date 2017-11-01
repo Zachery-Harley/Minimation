@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="base_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="702.0" prefWidth="1032.0" styleClass="background-1" stylesheets="@dark.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GUI.AnimationWindow">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="New" />
+                  <MenuItem mnemonicParsing="false" text="Open" />
+                  <MenuItem mnemonicParsing="false" text="Save" />
+                  <MenuItem mnemonicParsing="false" text="Save As" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="New Frame" />
+                  <MenuItem mnemonicParsing="false" text="New Layer" />
+                  <MenuItem mnemonicParsing="false" text="Delete Frame" />
+                  <MenuItem mnemonicParsing="false" text="Delete Layer" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <right>
+      <AnchorPane prefHeight="557.0" prefWidth="234.0" styleClass="background-2" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="img_demo_view" fitHeight="210.0" fitWidth="210.0" layoutX="17.0" layoutY="14.0" pickOnBounds="true" smooth="false" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="11.0">
+               <image>
+                  <Image url="@../../../../../OneDrive/Pictures/Camera%20Roll/DSC_0130.JPG" />
+               </image>
+            </ImageView>
+            <HBox prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="234.0">
+               <children>
+                  <Button fx:id="btn_demo_play" mnemonicParsing="false" onAction="#click_demo_start" styleClass="icon-button-start-dark">
+                     <HBox.margin>
+                        <Insets left="12.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="btn_demo_stop" mnemonicParsing="false" onAction="#click_demo_stop" styleClass="icon-button-stop-dark">
+                     <HBox.margin>
+                        <Insets left="6.0" />
+                     </HBox.margin></Button>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="FPS">
+                     <font>
+                        <Font name="Calibri" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="4.0" top="8.0" />
+                     </HBox.margin></Text>
+                  <TextField fx:id="txt_demo_fps" prefHeight="25.0" prefWidth="126.0" promptText="FPS" styleClass="input-large">
+                     <HBox.margin>
+                        <Insets left="4.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="22.0" layoutY="457.0" prefHeight="40.0" prefWidth="234.0" styleClass="background-3" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Button fx:id="btn_new_layer" mnemonicParsing="false" onAction="#click_layer_new" styleClass="icon-button-add-light">
+                     <HBox.margin>
+                        <Insets left="12.0" top="8.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btn_del_layer" mnemonicParsing="false" onAction="#click_layer_rem" styleClass="icon-button-remove-light">
+                     <HBox.margin>
+                        <Insets left="5.0" top="8.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btn_dup_layer" mnemonicParsing="false" onAction="#click_layer_dup" styleClass="icon-button-duplicate-light">
+                     <HBox.margin>
+                        <Insets left="70.0" top="8.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btn_up_layer" mnemonicParsing="false" onAction="#click_layer_up" styleClass="icon-button-up-light">
+                     <HBox.margin>
+                        <Insets left="5.0" top="8.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btn_down_layer" mnemonicParsing="false" onAction="#click_layer_down" styleClass="icon-button-down-light">
+                     <HBox.margin>
+                        <Insets left="5.0" top="8.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <ScrollPane layoutX="17.0" layoutY="270.0" prefHeight="243.0" prefWidth="200.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="272.0">
+              <content>
+                <AnchorPane fx:id="pane_layers" minHeight="0.0" minWidth="0.0" prefHeight="229.0" prefWidth="208.0" />
+              </content>
+            </ScrollPane>
+            <Line endX="105.0" layoutX="117.0" layoutY="265.0" startX="-105.0" />
+         </children>
+      </AnchorPane>
+   </right>
+   <left>
+      <AnchorPane prefHeight="557.0" prefWidth="234.0" styleClass="background-2" BorderPane.alignment="CENTER">
+         <children>
+            <ColorPicker fx:id="sel_colorPicker" layoutX="14.0" layoutY="14.0" onAction="#colour_changed" prefHeight="40.0" prefWidth="58.0" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="12.0" />
+            <TextField fx:id="txt_color" layoutX="62.0" layoutY="21.0" prefHeight="40.0" prefWidth="149.0" promptText="Color" styleClass="input-large" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="12.0">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </TextField>
+            <GridPane fx:id="grid_pallet" layoutX="17.0" layoutY="62.0" style="-fx-background-color: ;" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="64.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <HBox layoutX="17.0" layoutY="229.0" prefHeight="40.0" prefWidth="234.0" styleClass="background-3" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="226.0">
+               <children>
+                  <Text fx:id="lbl_pallet_name" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="pallet-file-label" text="Untitled" wrappingWidth="128.13671875">
+                     <font>
+                        <Font name="Calibri" size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="8.0" top="8.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Button mnemonicParsing="false" onAction="#click_new_pallet" styleClass="icon-button-add-light">
+                     <HBox.margin>
+                        <Insets top="8.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btn_pallet_save" mnemonicParsing="false" onAction="#click_save_pallet" styleClass="icon-button-save-light">
+                     <HBox.margin>
+                        <Insets left="5.0" top="8.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btn_pallet_load" mnemonicParsing="false" onAction="#click_pallet_open" styleClass="icon-button-load-light">
+                     <HBox.margin>
+                        <Insets left="5.0" top="8.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <bottom>
+      <AnchorPane prefHeight="120.0" prefWidth="1032.0" styleClass="background-2" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutY="80.0" prefHeight="120.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-large" text="Sequence" textAlignment="CENTER" wrappingWidth="198.13671875">
+                     <font>
+                        <Font name="Calibri" size="28.0" />
+                     </font>
+                  </Text>
+                  <StackPane prefHeight="43.0" prefWidth="200.0">
+                     <children>
+                        <ChoiceBox fx:id="sel_sequence" onDragDetected="#change_active_seq" prefHeight="25.0" prefWidth="169.0" styleClass="drop-down" />
+                     </children>
+                  </StackPane>
+                  <HBox prefHeight="44.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btn_sequence_new" mnemonicParsing="false" onAction="#click_seq_new" styleClass="button-1" text="New" />
+                        <Separator prefHeight="1.0" prefWidth="54.0" style="-fx-background-color: transparent; visibility: hidden;" />
+                        <Button fx:id="btn_sequence_del" mnemonicParsing="false" onAction="#click_seq_del" styleClass="button-1" text="Delete" />
+                     </children>
+                     <padding>
+                        <Insets left="12.0" right="12.0" top="12.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <Line endX="200.0" endY="110.0" startX="200.0" startY="10.0" />
+            <VBox layoutX="200.0" layoutY="-32.0" prefHeight="120.0" prefWidth="94.0" style="-fx-border-left-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="btn_new_frame" mnemonicParsing="false" onAction="#click_frame_new" styleClass="button-1" text="New">
+                     <VBox.margin>
+                        <Insets left="10.0" top="11.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btn_del_frame" mnemonicParsing="false" onAction="#click_frame_del" styleClass="button-1" text="Delete">
+                     <VBox.margin>
+                        <Insets left="10.0" top="11.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btn_dup_frame" mnemonicParsing="false" onAction="#click_frame_dup" styleClass="button-1" text="Duplicate">
+                     <VBox.margin>
+                        <Insets left="10.0" top="11.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <ScrollPane layoutX="294.0" layoutY="-40.0" prefHeight="200.0" prefWidth="735.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="310.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <content>
+                <AnchorPane fx:id="pane_frames" minHeight="0.0" minWidth="0.0" prefHeight="117.0" prefWidth="697.0" />
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <center>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-fit-to-height: true; -fx-fit-to-width: true;" BorderPane.alignment="CENTER">
+         <content>
+            <StackPane fx:id="pane_canvas_base" prefHeight="552.0" prefWidth="558.0" />
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>
