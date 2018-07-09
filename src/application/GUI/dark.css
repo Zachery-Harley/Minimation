@@ -1,13 +1,22 @@
+* {
+	-fx-background-1: #3b3b3b;/*59,59,59*/
+	-fx-background-2: #262626;/*38,38,38*/
+	-fx-background-3: #191919;/*25,25,25*/
+	-fx-layer-hover:  #4b4b4b;/*79,79,79*/
+	-fx-layer-active: #323232;/*50,50,50*/
+	-fx-layer-hover:  #4b4b4b;/*75,75,75*/
+}
+
 .background-1{
-	-fx-background-color: rgb(59, 59, 59);
+	-fx-background-color: -fx-background-1;
 }
 
 .background-2{
-	-fx-background-color: rgb(38, 38, 38);
+	-fx-background-color: -fx-background-2;
 }
 
 .background-3{
-	-fx-background-color: rgb(25, 25, 25);
+	-fx-background-color: -fx-background-3;
 }
 
 .button-1{
@@ -21,11 +30,11 @@
 	-fx-border-radius: 0 0 0 0;
 	-fx-background-radius: 0 0 0 0;
 	-fx-text-fill: white;
-	-fx-background-color: rgb(25, 25, 25);
+	-fx-background-color: -fx-background-3;
 }
 
 .input-large {
-	-fx-background-color: rgb(25, 25, 25);
+	-fx-background-color: -fx-background-3;
 	-fx-background-radius: 0 0 0 0;
 	-fx-text-fill: white;
 }
@@ -35,7 +44,7 @@
 }
 
 .color-picker {
-	-fx-background-color: rgb(25, 25, 25); 
+	-fx-background-color: -fx-background-3; 
 	-fx-background-radius: 2; 
 	-fx-padding: 0;
 	-fx-background-insets: 0, 1;
@@ -55,7 +64,7 @@
 .drop-down {
 	-fx-border-radius: 0 0 0 0;
 	-fx-background-radius: 0 0 0 0;
-	-fx-background-color: rgb(25, 25, 25);
+	-fx-background-color: -fx-background-3;
 	-fx-text-fill: white;
 }
 
@@ -68,7 +77,7 @@
 	-fx-pref-height: 25px;
 	
 	-fx-background-image: url("Icons/save.png");
-	-fx-background-color: rgb(38, 38, 38);
+	-fx-background-color: -fx-background-2;
 	-fx-background-size: cover;
 }
 
@@ -81,7 +90,7 @@
 	-fx-pref-height: 25px;
 	
 	-fx-background-image: url("Icons/open.png");
-	-fx-background-color: rgb(38, 38, 38);
+	-fx-background-color: -fx-background-2;
 	-fx-background-size: cover;
 }
 
@@ -94,7 +103,7 @@
 	-fx-pref-height: 25px;
 	
 	-fx-background-image: url("Icons/play.png");
-	-fx-background-color: rgb(25, 25, 25);
+	-fx-background-color: -fx-background-3;
 	-fx-background-size: cover;
 }
 
@@ -107,7 +116,7 @@
 	-fx-pref-height: 25px;
 	
 	-fx-background-image: url("Icons/stop.png");
-	-fx-background-color: rgb(25, 25, 25);
+	-fx-background-color: -fx-background-3;
 	-fx-background-size: cover;
 }
 .icon-button-add-light{
@@ -119,7 +128,7 @@
 	-fx-pref-height: 25px;
 	
 	-fx-background-image: url("Icons/new.png");
-	-fx-background-color: rgb(38, 38, 38);
+	-fx-background-color: -fx-background-2;
 	-fx-background-size: cover;
 }
 
@@ -132,7 +141,7 @@
 	-fx-pref-height: 25px;
 	
 	-fx-background-image: url("Icons/remove.png");
-	-fx-background-color: rgb(38, 38, 38);
+	-fx-background-color: -fx-background-2;
 	-fx-background-size: cover;
 }
 
@@ -145,7 +154,7 @@
 	-fx-pref-height: 25px;
 	
 	-fx-background-image: url("Icons/duplicate.png");
-	-fx-background-color: rgb(38, 38, 38);
+	-fx-background-color: -fx-background-2;
 	-fx-background-size: cover;
 }
 
@@ -158,7 +167,7 @@
 	-fx-pref-height: 25px;
 	
 	-fx-background-image: url("Icons/up.png");
-	-fx-background-color: rgb(38, 38, 38);
+	-fx-background-color: -fx-background-2;
 	-fx-background-size: cover;
 }
 
@@ -171,7 +180,7 @@
 	-fx-pref-height: 25px;
 	
 	-fx-background-image: url("Icons/down.jpg");
-	-fx-background-color: rgb(38, 38, 38);
+	-fx-background-color: -fx-background-2;
 	-fx-background-size: cover;
 }
 
@@ -204,21 +213,21 @@
 }
 
 .layer-preview-container{
-	-fx-background-color: rgb(25, 25, 25);
+	-fx-background-color: -fx-background-3;
 	-fx-border-color: black;
 	-fx-border-width: 2px;
 	-fx-text-fill: white;
 }
 
 .layer-preview-container_active{
-	-fx-background-color: rgb(50, 50, 50);
+	-fx-background-color: -fx-layer-active;
 	-fx-border-color: black;
 	-fx-border-width: 2px;
 	-fx-text-fill: white;
 }
 
 .layer-preview-container:hover{
-	-fx-background-color: rgb(75, 75, 75);
+	-fx-background-color: -fx-layer-hover;
 }
 
 .layer-preview-check {

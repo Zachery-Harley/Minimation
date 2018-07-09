@@ -44,15 +44,19 @@ public class AnimationWindow {
    // Constants. //
    ////////////////
 
+	//TODO Speerate pallet to own object fully
    public final static CornerRadii palletCorner = new CornerRadii(5);
+   //TODO remove placeholder
    public Layer placeholder;
 
    //////////////////////
    // Class variables. //
    //////////////////////
 
+   
    private static AnimationWindow controllerInstance; //The controller for the animation window
    private static boolean loaded = false; //True when the controller has been loaded
+   //TODO fix what ever DEMO is
    private static Demo demo = null;
    
    ////////////////////
