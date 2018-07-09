@@ -24,14 +24,7 @@ public class Session {
 	//////////////////////
 	// Class variables. //
 	//////////////////////
-	
-	///// Session Data \\\\\
-	private ArrayList<Sequence> sequences = new ArrayList<Sequence>();
 		
-	///// Active Data \\\\\
-	private Color activeColor = Color.BLACK; //Users current color
-	private Sequence activeSequence = null; //The active frame is contained within the active sequence
-	
 	
 	////////////////////
 	// Class methods. // 
@@ -43,7 +36,12 @@ public class Session {
 	// Instance variables. //
 	/////////////////////////
 	
-	//Variables that are local to the class
+	///// Session Data \\\\\
+	private ArrayList<Sequence> sequences = new ArrayList<Sequence>();
+		
+	///// Active Data \\\\\
+	private Color activeColor = Color.BLACK; //Users current color
+	private Sequence activeSequence = null; //The active frame is contained within the active sequence
 	
 	///////////////////
 	// Constructors. //
@@ -71,7 +69,8 @@ public class Session {
 	 */
 	public void setActiveColor(Color newColor) {
 		if(newColor == null) {
-			Logger.log(LogType.ERROR, "Session.setActiveColor: Null color passed");
+			IllegalArgumentException e = new IllegalArgumentException("newColor cannot be Null");
+			Logger.log(LogType.ERROR, e, "Session.setActiveColor: Null color passed");
 			newColor = Color.BLACK;
 		}
 		activeColor = newColor;

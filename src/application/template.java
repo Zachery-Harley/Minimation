@@ -21,58 +21,58 @@ package application;
  */
 
 public class template {
+	
+	////////////////
+	// Constants. //
+	////////////////
+	
+	//Store your constants here if you have any
+	
+	//////////////////////
+	// Class variables. //
+	//////////////////////
+	
+	//These are the static properties that exists only once no matter the number of classes initialized 
+	
+	////////////////////
+	// Class methods. // 
+	////////////////////
+	
+	//these are the static methods that are part of the class
+	
+	/////////////////////////
+	// Instance variables. //
+	/////////////////////////
+	
+	//Variables that are local to the class
+	
+	///////////////////
+	// Constructors. //
+	///////////////////
+	
+	//Constructors
+	
+	////////////////////////////
+	// Read/Write properties. //
+	////////////////////////////
+	
+	//Methods to get and set instance variables
+	
+	///////////////////////////
+	// Read-only properties. //
+	///////////////////////////
+	
+	//Methods to access read only properties
+	
+	//////////////
+	// Methods. //
+	//////////////
 
-   ////////////////
-   // Constants. //
-   ////////////////
+//Normal methods
 
-   //Store your constants here if you have any
-
-   //////////////////////
-   // Class variables. //
-   //////////////////////
-
-   //These are the static properties that exists only once no matter the number of classes initialized 
-
-   ////////////////////
-   // Class methods. // 
-   ////////////////////
-
-   //these are the static methods that are part of the class
-
-   /////////////////////////
-   // Instance variables. //
-   /////////////////////////
-
-   //Variables that are local to the class
-
-   ///////////////////
-   // Constructors. //
-   ///////////////////
-
-   //Constructors
-
-   ////////////////////////////
-   // Read/Write properties. //
-   ////////////////////////////
-
-   //Methods to get and set instance variables
-
-   ///////////////////////////
-   // Read-only properties. //
-   ///////////////////////////
-
-   //Methods to access read only properties
-
-   //////////////
-   // Methods. //
-   //////////////
-
-   //Normal methods
-   
-   //TODO When sorting layers, the 'active' layer will be not mouse transpernt, the others
-   //will be set that way.
-   //TODO When doing pixles zoom into the canvas using http://stackoverflow.com/questions/31593859/zoom-levels-with-the-javafx-8-canvas
-   //TODO when changing the order of layers, you can change the index things are draw
-   //TODO snapshop will get an image of the canvas
+//TODO When sorting layers, the 'active' layer will be not mouse transpernt, the others
+//will be set that way.
+//TODO When doing pixles zoom into the canvas using http://stackoverflow.com/questions/31593859/zoom-levels-with-the-javafx-8-canvas
+//TODO when changing the order of layers, you can change the index things are draw
+//TODO snapshop will get an image of the canvas
 }
